@@ -60,6 +60,7 @@
         type: 'image',
         tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
+        title:'test',
         gallery: {
             enabled: true,
             navigateByImgClick: true,

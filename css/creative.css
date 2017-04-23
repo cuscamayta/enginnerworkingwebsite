@@ -115,7 +115,7 @@ body {
       background-color: transparent;
       border-color: rgba(255, 255, 255, 0.3); }
       #mainNav .navbar-brand {
-        color: rgba(255, 255, 255, 0.7); }
+        color: rgba(255, 255, 255, 0.7); }        
         #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
           color: white; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link,
