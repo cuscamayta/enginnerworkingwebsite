@@ -1,8 +1,30 @@
-(function($) {
+(function ($) {
     "use strict"; // Start of use strict
 
+    $('.menu').click(function () {
+        if ($('#overlay-menu').width() > 0) {
+            $('.fa-navicon').show();
+            $('.fa-times').hide();
+            $('#overlay-menu').width('0%');
+            $('#overlay-menu').height('0%');
+        }
+        else {
+            $('#overlay-menu').width('100%');
+            $('#overlay-menu').height('100%');
+            $('.fa-navicon').hide();
+            $('.fa-times').show();
+        }
+    })
+
+    $('.overlay-content a').click(function () {
+        $('#overlay-menu').height('0%');
+        $('#overlay-menu').width('0%');
+        $('.fa-navicon').show();
+        $('.fa-times').hide();
+    })
+
     // Smooth scrolling using jQuery easing
-    $('a[href*="#"]:not([href="#"])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -20,20 +42,16 @@
         target: '#mainNav',
         offset: 48
     });
-
-    // Closes responsive menu when a link is clicked
-    $('.navbar-collapse>ul>li>a').click(function() {
-        $('.navbar-collapse').collapse('hide');
-    });
+ 
 
     // Collapse the navbar when page is scrolled
-    $(window).scroll(function() {    
+    $(window).scroll(function () {
         if ($("#mainNav").offset().top > 100) {
-            $('.navbar-toggler i').css('color','#8a8c8a');
-           $("#mainNav").addClass("navbar-shrink");
+            $('.navbar-toggler i').css('color', '#8a8c8a');
+            $("#mainNav").addClass("navbar-shrink");
         } else {
-           $("#mainNav").removeClass("navbar-shrink");
-           $('.navbar-toggler i').css('color','#fff');
+            $("#mainNav").removeClass("navbar-shrink");
+            $('.navbar-toggler i').css('color', '#fff');
         }
     });
 
@@ -60,7 +78,7 @@
         type: 'image',
         tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
-        title:'test',
+        title: 'test',
         gallery: {
             enabled: true,
             navigateByImgClick: true,

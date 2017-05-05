@@ -583,8 +583,8 @@ header.masthead {
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
-    width: 0;
+    height: 0%;
+    width: 0%;
     position: fixed; /* Stay in place */
     z-index: 2; /* Sit on top */
     left: 0;
@@ -675,4 +675,41 @@ header.masthead {
   font-weight: bold !important;
     color: #fff !important;
     font-size: 35px !important;
+}
+
+
+
+  .navbar-toggler {
+      z-index: 1;
+  }
+  
+  @media (max-width: 576px) {
+      nav>.container {
+          width: 100%;
+      }
+      /*#btn-menu{
+  display: none;
+}*/
+  }
+  
+@media (max-width: 700px) {
+      .info {
+          width: 95%;
+      }
+      .logo-text {
+          font-size: 1.1rem;
+          /*display: none;*/
+      }
+      .fa-navicon {
+          color: #000 !important;
+      }
+      .fa-navicon {
+          color: #000 !important;
+      }
+      #btn-menu {
+          top: 3px;
+      }
+      #btn-menu i {
+          color: #000;
+      }
 }
